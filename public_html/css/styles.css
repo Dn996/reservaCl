@@ -1,0 +1,389 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+header{
+    padding: 2%;
+    background: #002645;
+}
+
+h5 #id{
+    display: none;    
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+#inicio{
+    text-align: center;
+}
+
+/*Login*/
+.formLogin{
+    border: #337ab7 5px double;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 2px;
+    background: ivory;
+}
+
+#login{
+    width: 30%;
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+#login h3{
+    padding-bottom: 1rem;
+    border-radius: 10px solid black;  
+}
+
+.contLogin{
+    max-width: 100%;
+}
+
+.form-group{
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+
+.form-group label{
+    width: 20%;
+    text-align: left;
+    margin: 2%;
+}
+
+/* Formulario de registro */
+.contend{
+    background-image: url("../img/fondoRegistro.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.formRegistro{
+    border: #d4d9dbc5 5px double;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 2px;
+    opacity: 0.9;
+    background: white;
+}
+
+.formRegistro:hover{
+    background: #002645;
+    color: azure;
+}
+
+#registro{
+    width: 40%;
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+/*Menu */
+.menuGeneral{
+    background: #002645;        
+    text-align: center;
+    padding-top: 1%;
+    position: fixed;
+}
+
+.cuadroForm{
+    background: #002645;        
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+
+.top_menu ul{
+    list-style:none;
+    float:left;
+    border: 1px solid #eaab00;
+    width: 80%;
+}
+ 
+.top_menu ul li{
+    float:left;
+    margin-right:20px;
+    margin-bottom:2px;
+    padding:3px;
+    margin-left: 25%;
+}
+
+.top_menu ul li a{
+    color: azure;    
+    text-decoration:none;
+}
+
+.top_menu ul li a:hover{
+    color: blue;
+}
+/*Imágen principal*/
+#img-prin{
+    height: auto;
+}
+
+#img-prin img{
+    width: 90%;
+}
+
+#img-prin img:hover{
+    filter: saturate(200%);
+}
+
+/* Imagenes principales de laboratorios */
+.imgPrinLab{
+    display: none;
+}
+
+/* Laboratorio Resistencia de Materiales */
+#labResis{
+    background-image: url("../img/resitencia.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.infLab{
+    border-right: 5px solid #eaab00;
+    opacity: 0.8;
+    background: #002645;
+    color: azure;
+    text-align: justify;
+}
+
+.infLab h3{
+    text-align: center;
+}
+
+.contLab{
+    width: 100%; 
+}
+
+.infoL{
+    margin-top: 10%;
+}
+
+.infoR{
+    color: #041c30;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.imagenEn{
+    width:70px;
+    height:70px;
+    border-radius:150px;
+}
+
+.infoR{
+    margin-top: 2%;
+}
+
+/*Laboratorios*/
+#laboratorios div{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#laboratorios .labs1{
+    height: 300px;
+    background: red;
+    position: relative;
+    overflow: hidden;
+}
+
+#laboratorios .labs1 h3{
+    width: 100%;
+    border-top: 7px solid #002645;
+}
+
+
+
+#laboratorios .labs1:hover .infoLab1{
+    transform: translateY(10%);
+}
+
+#laboratorios .labs1 .infoLab1{
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    padding: 35% 2% 35% 2%;
+    background: rgb(0,0,0,0.8);
+    transform: translateY(100%);
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all 1.5s ease-out;
+}
+
+.labs1 .infoLab1 h2{
+    border: 1px solid azure;
+    border-radius: 3%;
+    width: 75%;
+    margin-left: 12%;
+}
+
+#laboratorios .labs2{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#laboratorios .labs2 h3{
+    width: 100%;
+    border-top: 7px solid #002645;
+}
+
+#laboratorios .labs2:hover .infoLab2{
+    transform: translateY(10%);
+}
+
+#laboratorios .labs2 .infoLab2{
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    padding: 35% 2% 35% 2%;
+    background: rgb(0,0,0,0.8);
+    transform: translateY(100%);
+    transition: all 1.5s ease-out;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#laboratorios .labs3{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#laboratorios .labs3 h3{
+    width: 100%;
+    border-top: 7px solid #394553;
+}
+
+#laboratorios .labs3:hover .infoLab3{
+    transform: translateY(10%);
+}
+
+#laboratorios .labs3 .infoLab3{
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    padding: 35% 2% 35% 2%;
+    background: rgb(0,0,0,0.8);
+    transform: translateY(100%);
+    transition: all 1.5s ease-out;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#laboratorios .labs4{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#laboratorios .labs4 h3{
+    width: 100%;
+    border-top: 7px solid #394553;
+}
+
+#laboratorios .labs4:hover .infoLab4{
+    transform: translateY(10%);
+}
+
+#laboratorios .labs4 .infoLab4{
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    padding: 35% 2% 35% 2%;
+    background: rgb(0,0,0,0.8);
+    transform: translateY(100%);
+    transition: all 1.5s ease-out;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#laboratorios .labs5{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#laboratorios .labs5 h3{
+    width: 100%;
+    border-top: 7px solid #394553;
+}
+
+#laboratorios .labs5:hover .infoLab5{
+    transform: translateY(10%);
+}
+
+#laboratorios .labs5 .infoLab5{
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    padding: 35% 2% 35% 2%;
+    background: rgb(0,0,0,0.8);
+    transform: translateY(100%);
+    transition: all 1.5s ease-out;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Footer*/
+footer{
+    background: #002645;
+    padding: 3%;
+    color: azure;
+}
+
+.pie2{
+    border-top: 4px solid #eaab00;
+    border-bottom: 4px solid #eaab00;
+}
+
+.pie2 h4{
+    color: #eaab00;
+}
+
+.pie2 div .img1{
+    width:60px;
+    height:60px;
+    border-radius:150px;
+}
+
+.pie2 div .img2{
+    width:60px;
+    height:60px;
+    border-radius:150px;
+}
+
+.pie2 div .img3{
+    width:60px;
+    height:60px;
+    border-radius:150px;
+}
+
+.pie3{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
