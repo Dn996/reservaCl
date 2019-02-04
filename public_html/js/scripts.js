@@ -106,6 +106,7 @@ $(document).ready(function () {
 
     // GET/READ/PARAM      
     $('#form-login').on('submit', function (event) {
+        
         event.preventDefault();
         var createInputUsuario = $('#user');
         var usuario = datoBusqueda(createInputUsuario.val());
@@ -196,58 +197,6 @@ $(document).ready(function () {
     });
 
     //vista administrador
-    var admin = obtenerValorParametro('ad');
-    var encargado = obtenerValorParametro('en');
-    var estudiante = obtenerValorParametro('es');
-    if (admin) {
-        $.ajax({
-            url: BASE_URI + '/usuarios/' + admin,
-            method: 'GET',
-            contentType: 'application/json',
-            crossDomain: true,
-            success: function (response) {
-                console.log(response);
-                console.log("adkfjñ");
-                console.log(valor);
-                console.log(response.tipo);
-                var tbodyEl = $('.ident');
-                tbodyEl.html('');
-                tbodyEl.append('\
-                            <h4>'+response.nombre+'<a href="../index.html">Salir</a></h4>\ \
-                        ');
-                if (response.id_usuario !== 0 && response.tipo !== 0) {
-                    if (valor == 3 && response.tipo == 3) {
-                        location.href = "/reservaCl/internas/Administrador.html?ad=" + response.id_usuario;
-                    } else {
-                        var tbodyEl = $('.mensaje');
-                        tbodyEl.html('');
-                        tbodyEl.append('\
-                            <h6>USTED NO ES ADMINISTRADOR</h6>\ \
-                        ');
-                    }
-                    if (valor == 2 && response.tipo == 2) {
-                        location.href = "/reservaCl/internas/AdministrarLab.html?en=" + response.id_usuario;
-                    } else {
-                        var tbodyEl = $('.mensaje');
-                        tbodyEl.html('');
-                        tbodyEl.append('\
-                            <h6>USTED NO ES ENCARGADO DE LABORATORIO</h6>\ \
-                        ');
-                    }
-                    if (valor == 1 && response.tipo == 1) {
-                        location.href = "/reservaCl/internas/LoginReservar.html?es=" + response.id_usuario;
-                    }
-
-                } else {
-                    var tbodyEl = $('.mensaje');
-                    tbodyEl.html('');
-                    tbodyEl.append('\
-                            <h6>Usuario o contraseña incorrectas</h6>\ \
-                    ');
-
-                }
-            }
-        });
-    }
+   
 
 });
