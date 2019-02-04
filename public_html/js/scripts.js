@@ -145,7 +145,7 @@ $(document).ready(function () {
                         ');
                     }
                     if (valor == 1 && response.tipo == 1) {
-                        location.href = "/reservaCl/internas/LoginReservar.html?es=" + response.id_usuario;
+                        location.href = "/reservaCl/internas/reservas.html?es=" + response.id_usuario;
                     }
 
                 } else {
