@@ -3,19 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Laboratorios</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
-    <link rel="stylesheet" type="text/js" media="screen" href="js/scripts.js" />
-    <link rel="stylesheet" type="text/js" media="screen" href="js/jquery.js" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <script src="js/jquery.js"></script>
-    <script src="js/funciones.js"></script>
     <script src="js/scripts.js"></script>
-    
+   <!-- <script src="main.js"></script>-->
 </head>
 <body>
+
     <div class="container " id="cnt_plantilla">
         <div class="row" id="inicio">
             <header id="encabezado">
@@ -29,8 +27,8 @@
                 </div> 
             </header>
         </div>
-        <div class="row">
-            <div class="col-md-7 menuGeneral">
+        <div class="row ">
+            <div class="col-md-10 menuGeneral">
                     <nav class="top_menu" id="menu">
                         <ul>
                             <li><a href="#">Quienes somos</a></li>
@@ -38,64 +36,71 @@
                         </ul>
                     </nav>     
             </div>
-            <div class="col-md-5 cuadroForm">
-                <a href="loginAdmin.html" class="btn btn-primary btn-md fa fa-sign" type="submit"> Administración General</a>  
-                <a href="internas/registroEstudiante.html" class="btn btn-primary btn-md fa fa-registered" type="submit"> Registro-Estudiante</a>  
-            </div>
         </div>
 
-
-        <div class="row fotoPrin" id="img-prin">
-            <img src="img/lab.jpg" alt="">
-        </div>
-        
-        <div class="row" id="laboratorios">
-            <h2>LABORATORIOS</h2>
-            <div class="row laboratorio" id="laboratorios">
-                <div class="col-md-6 laboratorio" >                    
+        <div  class="row formLogin" id="login">
+            <h3>Ingreso</h3>
+            <form id="form-login" class="form-inline contLogin" action="/index.html"> <!--class="form-inline contLogin" action="/index.html"-->
+                <div class="form-group">
+                    <label for="user">User:</label>
+                    <input type="user" class="form-control" id="user" placeholder="usuario">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="*********">
+                </div>
+                
+                <div class="mensaje">                 
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Entrar</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
 <footer>
     <div class="container">
         <div class="row" id="pie">
-            <div class="col-md-3 pie1">
+            <div class="col-md-4 pie1">
                 <div>
-                    <img src="img/logo2.png" alt="">
-                    <h5>Universidad Técnica Particular De Loja</h5>
+                    <img src="img/logo.png" alt="">
                 </div>
             </div>
-            <div class="col-md-6 pie2">
+            <div class="col-md-4 pie2">
                 <div>
-                    <h4>Contactos</h4>
+                    <h4>
+                        Contactos
+                    </h4>
                     <div class="col-md-4">
                         <img src="img/contacto.png" class="img1">
-                        <div class="social">
-                            <h5>Dayana Chamba</h5>
-                            <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>dchamba@utpl.edu.ec</i></h5>
-                        </div>
-
+                        <h5>
+                            Dayana Chamba
+                        </h5>
                     </div>
                     <div class="col-md-4">
                         <img src="img/contacto.png" class="img2">
-                        <div class="social">
-                            <h5>Valeria Encalada</h5>
-                            <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>vencalada@utpl.edu.ec</i></h5>
-                        </div>
+                        <h5>
+                            Valeria Encalada
+                        </h5>
                     </div>
                     <div class="col-md-4">
                         <img src="img/contacto.png" class="img3">
-                        <div class="social">
-                            <h5>Paul Cuenca</h5>
-                            <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>pacuenca@utpl.edu.ec</i></h5>
-                        </div>
+                        <h5>
+                            Paul Cuenca
+                        </h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pie3">
-                <h5>San Cayetano Alto - Loja</h5>
+            <div class="col-md-4 pie3">
+                <span>
+                Universidad Técnica Particular De Loja
+                </span>
+                <span>
+                San Cayetano Alto - Loja
+                </span>
+
             </div>                                                                                                                                                                                                    
         </div>
     </div>
