@@ -54,6 +54,7 @@ $(document).ready(function () {
                 tbodyEl.append('\
                         \n\<div class="col-md-6 labs1"> ' + '\
                         \n\<h3 class="labo"> ' + laboratorio.nombre + '</h3>\
+                        \n\<img src="img/imagen.jpg" alt="resistencia"> ' + '\
                         \n\<section class="infoLab1"> ' + '\
                         \n\<h2> ' + laboratorio.nombre + '</h2>' + '\
                         \n\<h5> ' + laboratorio.nombre_usuario + '</h5>' +

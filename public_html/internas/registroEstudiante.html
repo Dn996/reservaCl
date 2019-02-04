@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Laboratorios</title>
+    <title>LRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
-    <link rel="stylesheet" type="text/js" media="screen" href="js/scripts.js" />
-    <link rel="stylesheet" type="text/js" media="screen" href="js/jquery.js" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    
 </head>
 <body>
+
     <div class="container " id="cnt_plantilla">
         <div class="row" id="inicio">
             <header id="encabezado">
@@ -28,8 +28,8 @@
                 </div> 
             </header>
         </div>
-        <div class="row">
-            <div class="col-md-7 menuGeneral">
+        <div class="row ">
+            <div class="col-md-12 menuGeneral">
                     <nav class="top_menu" id="menu">
                         <ul>
                             <li><a href="#">Quienes somos</a></li>
@@ -37,24 +37,36 @@
                         </ul>
                     </nav>     
             </div>
-            <div class="col-md-5 cuadroForm">
-                <a href="loginAdmin.html" class="btn btn-primary btn-md fa fa-sign" type="submit"> Administración General</a>  
-                <a href="internas/registroEstudiante.html" class="btn btn-primary btn-md fa fa-registered" type="submit"> Registro-Estudiante</a>  
+        </div>
+        <div class="contend">
+            <div class="row formRegistro" id="registro">
+                <h3>Registro de Estudiantes</h3>
+                <form class="form-inline contRegistro" action="/action_page.php">
+                    <div class="form-group">
+                        <label class="cedE" for="cedula">Cédula:</label>
+                        <input type="cedula" class="form-control" id="cedulaE" placeholder="xxxxxxxxxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="names">Nombres Completos:</label>
+                        <input type="names" class="form-control" id="names" placeholder="nombres & apellidos">
+                    </div>
+                    <div class="form-group">
+                        <label for="user">Usuario:</label>
+                        <input type="names" class="form-control" id="user" placeholder="usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="pasword">Contraseña:</label>
+                        <input type="pasword" class="form-control" id="pasword" placeholder="*********">
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submitEstu" class="btn btn-default">Save</button>
+                    </div>
+                </form>
             </div>
         </div>
 
-
-        <div class="row fotoPrin" id="img-prin">
-            <img src="img/lab.jpg" alt="">
-        </div>
         
-        <div class="row" id="laboratorios">
-            <h2>LABORATORIOS</h2>
-            <div class="row laboratorio" id="laboratorios">
-                <div class="col-md-6 laboratorio" >                    
-                </div>
-            </div>
-        </div>
     </div>
 </body>
 <footer>
@@ -62,7 +74,7 @@
         <div class="row" id="pie">
             <div class="col-md-3 pie1">
                 <div>
-                    <img src="img/logo2.png" alt="">
+                    <img src="../img/logo2.png" alt="">
                     <h5>Universidad Técnica Particular De Loja</h5>
                 </div>
             </div>
@@ -70,7 +82,7 @@
                 <div>
                     <h4>Contactos</h4>
                     <div class="col-md-4">
-                        <img src="img/contacto.png" class="img1">
+                        <img src="../img/contacto.png" class="img1">
                         <div class="social">
                             <h5>Dayana Chamba</h5>
                             <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>dchamba@utpl.edu.ec</i></h5>
@@ -78,14 +90,14 @@
 
                     </div>
                     <div class="col-md-4">
-                        <img src="img/contacto.png" class="img2">
+                        <img src="../img/contacto.png" class="img2">
                         <div class="social">
                             <h5>Valeria Encalada</h5>
                             <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>vencalada@utpl.edu.ec</i></h5>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/contacto.png" class="img3">
+                        <img src="../img/contacto.png" class="img3">
                         <div class="social">
                             <h5>Paul Cuenca</h5>
                             <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>pacuenca@utpl.edu.ec</i></h5>
