@@ -92,32 +92,32 @@
                     <form method="post" action="">
                         <div class="datos">
                             <label for="">Titulación:</label>
-                            <input class="form-control" required type="text" name="nombres" placeholder="Titulación"><br>
+                            <input class="form-control" id="titulacion" required type="text" name="titulacion" placeholder="Titulación"><br>
                             <label for="">Periodo Académico:</label>
-                            <input class="form-control" required type="text" name="apellidos" placeholder="Abril 2019 - Agosto 2019"><br>
+                            <input class="form-control" required type="text" id="periodoAc" name="peridodoAc" placeholder="Abril 2019 - Agosto 2019"><br>
                             <label for="">Nivel Académico:</label>
-                            <input class="form-control" required type="number" name="telefono" placeholder="Posgrado"><br>
+                            <input class="form-control" required type="text" id="nivelAc" name="nivelAc" placeholder="Posgrado"><br>
                             <label for="">Componente:</label>
-                            <input class="form-control" required type="email" name="correo" placeholder="Materia" required=""><br>
+                            <input class="form-control" required type="text" id="componente" name="componente" placeholder="Materia" required=""><br>
                             <label for="">Código de proyecto (ISO 9001):</label>
-                            <input class="form-control" required type="email" name="correo" placeholder="Código" required=""><br>
+                            <input class="form-control" required type="text" id="codigo" name="codigo" placeholder="Código" required=""><br>
                             <label for="">Tema de práctica:</label>
-                            <input class="form-control" required type="text" name="cedula" placeholder="Tema"><br>
+                            <input class="form-control" required type="text" id="tema" name="tema" placeholder="Tema"><br>
                             <label for="">Docente:</label>
-                            <input class="form-control" required type="text" name="direccion" placeholder="Docente"><br>
+                            <input class="form-control" required type="text" id="docente" name="docente" placeholder="Docente"><br>
                             <label for="">Estudiante Tesista:</label>
-                            <input class="form-control" required type="email" name="correo" placeholder="Practicante" required=""><br>
+                            <input class="form-control" required type="text" id="estudiante" name="estudiante" placeholder="Practicante" required=""><br>
                             <label for="">Ciclo:</label>
-                            <input class="form-control" required type="email" name="correo" placeholder="Ciclo" required=""><br>
+                            <input class="form-control" required type="text" id="ciclo" name="ciclo" placeholder="Ciclo" required=""><br>
                             <label for="">Paralelo:</label>
-                            <input class="form-control" required type="email" name="correo" placeholder="Paralelo" required=""><br>
+                            <input class="form-control" required type="text" id="paralelo" name="paralelo" placeholder="Paralelo" required=""><br>
                             <label for="">Fecha de reserva:</label>
-                            <input class="form-control" type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento"><br>
+                            <input class="form-control" type="text" id="fecha" name="fecha" placeholder="Fecha de Nacimiento"><br>
                             <label for="">Hora:</label>
-                            <input class="form-control" type="time" name="hora" placeholder="Hora" required=""><br>
+                            <input class="form-control" type="text" id="hora" name="hora" placeholder="Hora" required=""><br>
                         </div>
                         <div class="guardar">
-                            <button class="form-control btn btn-primary btn-md fa fa-sign">Guardar Información</button>
+                            <button type="submit" id="btn_reservar_est" class="form-control btn btn-primary btn-md fa fa-sign" >Guardar Información</button>
                         </div>
                     </form>
                 </section>

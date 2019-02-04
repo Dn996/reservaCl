@@ -1,4 +1,4 @@
-var BASE_URI = "http://localhost:10297/reservaLab/api";
+var BASE_URI = "http://localhost:8080/reservaLab/api";
 
 
 function obtenerValorParametro(sParametroNombre) {
@@ -106,7 +106,7 @@ $(document).ready(function () {
 
     // GET/READ/PARAM      
     $('#form-login').on('submit', function (event) {
-        
+
         event.preventDefault();
         var createInputUsuario = $('#user');
         var usuario = datoBusqueda(createInputUsuario.val());
@@ -197,6 +197,54 @@ $(document).ready(function () {
     });
 
     //vista administrador
-   
 
+    //Reservas
+    $('#btn_reservar_est').on('submit', function (event) {
+        event.preventDefault();
+
+        var createInputTitulacion = $('#titulacion');
+        var createInputPeriodoAc = $('#periodoAc');
+        var createInputNivelAc = $('#nivelAc');
+        var createInputComponente = $('#componente');
+        var createInputCodigo = $('#codigo');
+        var createInputTema = $('#tema');
+        var createInputDocente = $('#docente');
+        var createInputEstudiante = $('#estudiante');
+        var createInputCiclo = $('#ciclo');
+        var createInputParalelo = $('#paralelo');
+        var createInputFecha = $('#fecha');
+        var createInputHora = $('#hora');
+        $.ajax({
+            url: BASE_URI + '/reserva',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({titulacion: createInputTitulacion.val(),
+                periodo_academico: createInputPeriodoAc.val(), nivel_academico: createInputNivelAc.val(),
+                componente: createInputComponente.val(), codigo_proyecto: createInputCodigo.val(),
+                tema_practica: createInputTema.val(), docente: createInputDocente.val(),
+                estudiante: createInputEstudiante.val(), ciclo: createInputCiclo.val(),
+                fecha: createInputFecha.val(), hora: createInputHora.val(),
+                laboratorio_id_laboratorio: 1, usuario_id_usuario: 3}),
+            success: function (response) {
+                var tbodyEl = $('.mensajeEst');
+                tbodyEl.html('');
+                tbodyEl.append('\
+                            <label>Datos guardados correctamente</label>\ \
+                    ');
+
+                createInputTitulacion.val("");
+                createInputPeriodoAc.val("");
+                createInputNivelAc.val("");
+                createInputComponente.val("");
+                createInputCodigo.val("");
+                createInputTema.val("");
+                createInputDocente.val("");
+                createInputEstudiante.val("");
+                createInputCiclo.val("");
+                createInputParalelo.val("");
+                createInputFecha.val("");
+                createInputHora.val("");
+            }
+        });
+    });
 });
