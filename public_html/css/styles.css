@@ -8,10 +8,6 @@ header{
     background: #002645;
 }
 
-h5 #id{
-    display: none;    
-}
-
 .container{
     width: 100%;
     text-align: center;
@@ -154,10 +150,7 @@ h5 #id{
 
 /* Laboratorio Resistencia de Materiales */
 #labResis{
-    background-image: url("../img/resitencia.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 1%;
 }
 
 .infLab{
@@ -195,10 +188,6 @@ h5 #id{
     margin-top: 2%;
 }
 
-/*.tablaEnsayos{
-    display: none;
-}*/
-
 /*Laboratorios*/
 #laboratorios div{
     margin-top: 2%;
@@ -206,7 +195,7 @@ h5 #id{
 }
 
 #laboratorios .labs1{
-    height: 300px;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
@@ -347,6 +336,151 @@ h5 #id{
     transition: all 1.5s ease-out;
     color: azure;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Encargado VerReservas de laboratorios*/
+#ShowReserva a{
+    color: black;
+}
+
+#CreateLab a{
+    color: black;
+}
+
+#CreateUser a{
+    color: black;
+}
+
+/*Encargado VerReservas de laboratorios*/
+.documentoSolicitud{
+}
+
+.TituloDoc{
+}
+
+.CuerpoDoc{
+    margin-top: 5%;
+    padding: 2%;
+    border: 2px solid black;
+
+}
+
+.camposDoc{
+    margin-top: 8%;
+    display: inline;
+}
+
+.camposDoc h5{
+    margin-top: 8%;
+    color: black;
+    margin: 5%;
+    margin-bottom: 2%;
+    display: inline;
+    border-bottom-style:dotted;
+    border-width: 1px; 
+  	border-color: #660033; 
+}
+
+.observacionDoc{
+    margin-top: 8%;
+    text-align: left;
+}
+
+.contDoc{
+    border-top: 1px solid black;
+    margin: 3%;
+    margin-top: 10%;
+}
+
+/*Reserva de laboratorios*/
+.ReservasAgendadas{
+}
+
+table {
+  width: 100%;
+}
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+tr th{
+    border-bottom: 2px solid #555;
+    border-top: 2px solid #555;
+    color: #555;
+    text-align: center;
+    margin: 1%;
+    padding: 0.5em 1em;
+}
+
+td{
+    text-align: center;
+    border-right: 2px solid #555;
+    border-left: 2px solid #555;
+    padding: 0.9em 1em;
+}
+
+.filita{
+}
+
+.da{
+    border-radius: 2%;
+    margin: 1%;
+    opacity: 0.9;
+    background: lightgray;
+    color: #002645;
+}
+
+.da:hover{
+    background: #002645;
+    color: azure;
+}
+
+.datos{
+    padding: 2%;
+}
+
+.datos label{
+    width: 25%;
+    padding: 1%;
+    text-align: left;
+}
+
+.datos input{
+    width: 50%;
+    float: right;
+    padding: 0px 5px 0px 0px;
+}
+
+/*Parte de página de lab 1*/
+.ensayos{
+    padding: 1%;
+}
+
+.ensayos button{
+    float: left;
+}
+
+.tablaEnsayos{
+    background: #aacef8;
+    opacity: 0.6;
+}
+
+/*Encargado Crear equipos de laboratorios*/
+.lab_id_Lab{
+    display: none;
+}
+
+#lab_id_Lab2{
+    display: none;
+}
+
+.lab_Encargado_Lab{
+    display: none;
+}
+
+#lab_Encargado_Lab2{
+    display: none;
 }
 
 /*Footer*/
