@@ -125,8 +125,8 @@ $(document).ready(function () {
                 console.log(valor);
                 console.log(response.tipo);
                 if (response.id_usuario !== 0 && response.tipo !== 0) {
-                    if (valor==3 && response.tipo==3) {
-                        location.href = "/reservaCl/internas/Administrador.html?ad="+response.id_usuario;
+                    if (valor == 3 && response.tipo == 3) {
+                        location.href = "/reservaCl/internas/Administrador.html?ad=" + response.id_usuario;
                     } else {
                         var tbodyEl = $('.mensaje');
                         tbodyEl.html('');
@@ -134,17 +134,17 @@ $(document).ready(function () {
                             <h6>USTED NO ES ADMINISTRADOR</h6>\ \
                         ');
                     }
-                    if (valor==2 && response.tipo==2) {
-                        location.href = "/reservaCl/internas/AdministrarLab.html?en="+response.id_usuario;
-                    }else {
+                    if (valor == 2 && response.tipo == 2) {
+                        location.href = "/reservaCl/internas/AdministrarLab.html?en=" + response.id_usuario;
+                    } else {
                         var tbodyEl = $('.mensaje');
                         tbodyEl.html('');
                         tbodyEl.append('\
                             <h6>USTED NO ES ENCARGADO DE LABORATORIO</h6>\ \
                         ');
-                    }                    
-                    if (valor==1 && response.tipo==1) {
-                        location.href = "/reservaCl/internas/LoginReservar.html?es="+response.id_usuario;
+                    }
+                    if (valor == 1 && response.tipo == 1) {
+                        location.href = "/reservaCl/internas/LoginReservar.html?es=" + response.id_usuario;
                     }
 
                 } else {
@@ -194,7 +194,7 @@ $(document).ready(function () {
             }
         });
     });
-    
+
     //vista administrador
     var admin = obtenerValorParametro('ad');
     var encargado = obtenerValorParametro('en');
@@ -210,9 +210,14 @@ $(document).ready(function () {
                 console.log("adkfjñ");
                 console.log(valor);
                 console.log(response.tipo);
+                var tbodyEl = $('.ident');
+                tbodyEl.html('');
+                tbodyEl.append('\
+                            <h4>'+response.nombre+'<a href="../index.html">Salir</a></h4>\ \
+                        ');
                 if (response.id_usuario !== 0 && response.tipo !== 0) {
-                    if (valor==3 && response.tipo==3) {
-                        location.href = "/reservaCl/internas/Administrador.html?ad="+response.id_usuario;
+                    if (valor == 3 && response.tipo == 3) {
+                        location.href = "/reservaCl/internas/Administrador.html?ad=" + response.id_usuario;
                     } else {
                         var tbodyEl = $('.mensaje');
                         tbodyEl.html('');
@@ -220,17 +225,17 @@ $(document).ready(function () {
                             <h6>USTED NO ES ADMINISTRADOR</h6>\ \
                         ');
                     }
-                    if (valor==2 && response.tipo==2) {
-                        location.href = "/reservaCl/internas/AdministrarLab.html?en="+response.id_usuario;
-                    }else {
+                    if (valor == 2 && response.tipo == 2) {
+                        location.href = "/reservaCl/internas/AdministrarLab.html?en=" + response.id_usuario;
+                    } else {
                         var tbodyEl = $('.mensaje');
                         tbodyEl.html('');
                         tbodyEl.append('\
                             <h6>USTED NO ES ENCARGADO DE LABORATORIO</h6>\ \
                         ');
-                    }                    
-                    if (valor==1 && response.tipo==1) {
-                        location.href = "/reservaCl/internas/LoginReservar.html?es="+response.id_usuario;
+                    }
+                    if (valor == 1 && response.tipo == 1) {
+                        location.href = "/reservaCl/internas/LoginReservar.html?es=" + response.id_usuario;
                     }
 
                 } else {
@@ -244,5 +249,5 @@ $(document).ready(function () {
             }
         });
     }
-    
+
 });
