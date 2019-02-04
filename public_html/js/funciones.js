@@ -1,5 +1,51 @@
 window.onload=function() {
-
+    
+    $(document).on('click', '.showEn', function (event) {
+        console.log("hola aplstando boton de Ver ensayos");
+        var newcampo2;
+        event.preventDefault();
+        newcampo2='<table border="1" style=”width: 100%”>'+
+                    '<caption>Tabla de Ensayos</caption>'+
+                    '<colgroup>'+
+                        '<col style="width: 20%"/>'+
+                        '<col style="width: 40%"/>'+
+                        '<col style="width: 40%"/>'+
+                    '</colgroup>'+
+                    '<thead>'+
+                        '<tr>'+
+                            '<th colspan="3">Concreto</th>'+
+                        '</tr>'+
+                    '</thead>'+
+                    '<thead>'+
+                        '<tr>'+
+                            '<th rowspan="2">ENSAYOS</th>'+
+                            '<th colspan="2">NORMA</th>'+
+                        '</tr>'+
+                        '<tr>'+
+                            '<th>Nacional</th>'+
+                            '<th>Internacional</th>'+
+                        '</tr>'+
+                    '</thead>'+
+                    '<tbody>'+
+                        '<tr>'+
+                            '<th>Determinación del esfuerzo a la compresión de especimenes cilíndricos de concreto. </th>'+
+                            '<td>INEN 1573</td>'+
+                            '<td>ASTM C39</td>'+
+                        '</tr>'+
+                        '<tr>'+
+                            '<th>Determinación del esfuerzo a la compresión de especimenes cilíndricos de concreto. </th>'+
+                            '<td>INEN 1573</td>'+
+                            '<td>ASTM C39</td>'+
+                        '</tr>'+
+                    '</tbody>'+
+                    '<tfoot>'+
+                        '<tr>'+
+                            '<td colspan="3">Pie de tabla.</td>'+
+                        '</tr>'+
+                    '</tfoot>'+
+                '</table>';
+        $('#tablaEnsayos').append(newcampo2)
+    });
     $(document).on('click', '.rechazar', function (event) {
         event.preventDefault();
         $(this).closest('tr').remove();

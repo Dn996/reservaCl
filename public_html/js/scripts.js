@@ -50,7 +50,6 @@ $(document).ready(function () {
             var tbodyEl = $('.laboratorio');
             tbodyEl.html('');
             response.forEach(function (laboratorio) {
-
                 tbodyEl.append('\
                         \n\<div class="col-md-6 labs1"> ' + '\
                         \n\<h3 class="labo"> ' + laboratorio.nombre + '</h3>\
@@ -58,7 +57,7 @@ $(document).ready(function () {
                         \n\<section class="infoLab1"> ' + '\
                         \n\<h2> ' + laboratorio.nombre + '</h2>' + '\
                         \n\<h5> ' + laboratorio.nombre_usuario + '</h5>' +
-                        '\n\<h5> ' + laboratorio.email + '</h5>' +                        
+                        '\n\<h5> ' + laboratorio.email + '</h5>' +
                         '\n\<a href="lab1.html?lab=' + laboratorio.id_laboratorio + '" class="btn btn-primary btn-md fa fa-eye" id="labo"type="submit"></a> ' +
                         '\n\ </section>\
                         ' + '</div>\
@@ -67,9 +66,9 @@ $(document).ready(function () {
         }
     });
     //vista laboratorios 
-    
+
     var valor = obtenerValorParametro('lab');
-    if (valor) {        
+    if (valor) {
         console.log(valor);
         $.ajax({
             url: BASE_URI + '/laboratorios/' + valor,
@@ -86,21 +85,22 @@ $(document).ready(function () {
                 var tbodyEl = $('.infLab');
                 tbodyEl.html('');
                 tbodyEl.append('\
-                        \n\<h3>Información</h3> '+
-                        '<p>'+response.descripcion+'</p> \
+                        \n\<h3>Información</h3> ' +
+                        '<p>' + response.descripcion + '</p> \
                     ');
                 var tbodyEl = $('.infEncLabResis');
                 tbodyEl.html('');
                 tbodyEl.append('\
-                        \n\<h5>Responsable de Laboratorio</h5> '+
-                        '<h5>'+response.nombre_usuario+'</h5>\n\
-                        <h5>'+response.email+'</h5>\
+                        \n\<h5>Responsable de Laboratorio</h5> ' +
+                        '<h5>' + response.nombre_usuario + '</h5>\n\
+                        <h5>' + response.email + '</h5>\
                     ');
-                
+
 
             }
         });
-    };
+    }
+    ;
 
 
 
@@ -113,6 +113,7 @@ $(document).ready(function () {
         var contrasenia = datoBusqueda(createInputContrasenia.val());
         usuario = datoBusqueda(createInputUsuario.val());
         contrasenia = datoBusqueda(createInputContrasenia.val());
+        var valor = obtenerValorParametro('us');
         $.ajax({
             url: BASE_URI + '/usuarios/' + usuario + '/' + contrasenia,
             method: 'GET',
@@ -120,8 +121,32 @@ $(document).ready(function () {
             crossDomain: true,
             success: function (response) {
                 console.log(response);
+                console.log("adkfjñ");
+                console.log(valor);
+                console.log(response.tipo);
                 if (response.id_usuario !== 0 && response.tipo !== 0) {
-                    location.href = "/reservaCl/index.html";
+                    if (valor==3 && response.tipo==3) {
+                        location.href = "/reservaCl/internas/Administrador.html?ad="+response.id_usuario;
+                    } else {
+                        var tbodyEl = $('.mensaje');
+                        tbodyEl.html('');
+                        tbodyEl.append('\
+                            <h6>USTED NO ES ADMINISTRADOR</h6>\ \
+                        ');
+                    }
+                    if (valor==2 && response.tipo==2) {
+                        location.href = "/reservaCl/internas/AdministrarLab.html?en="+response.id_usuario;
+                    }else {
+                        var tbodyEl = $('.mensaje');
+                        tbodyEl.html('');
+                        tbodyEl.append('\
+                            <h6>USTED NO ES ENCARGADO DE LABORATORIO</h6>\ \
+                        ');
+                    }                    
+                    if (valor==1 && response.tipo==1) {
+                        location.href = "/reservaCl/internas/LoginReservar.html?es="+response.id_usuario;
+                    }
+
                 } else {
                     var tbodyEl = $('.mensaje');
                     tbodyEl.html('');
@@ -133,8 +158,8 @@ $(document).ready(function () {
             }
         });
     });
-    
-      $('#registro_Est').on('submit', function (event) {
+
+    $('#registro_Est').on('submit', function (event) {
         event.preventDefault();
 
         var createInputCedula = $('#cedulaE');
@@ -146,15 +171,15 @@ $(document).ready(function () {
         $.ajax({
             url: BASE_URI + '/usuarios',
             method: 'POST',
-            contentType: 'application/json',            
+            contentType: 'application/json',
             data: JSON.stringify({cedula: createInputCedula.val(),
                 nombres: createInputName.val(), usuario: createInputUser.val(),
                 contrasenia: createInputPass.val(), tipo: createInputTipo.val(),
                 mail: createInputMail.val()}),
             success: function (response) {
                 var tbodyEl = $('.mensajeEst');
-                    tbodyEl.html('');
-                    tbodyEl.append('\
+                tbodyEl.html('');
+                tbodyEl.append('\
                             <label>Datos guardados correctamente</label>\ \
                     ');
                 console.log(createInputTipo.val())
@@ -164,9 +189,60 @@ $(document).ready(function () {
                 createInputName.val('');
                 createInputUser.val('');
                 createInputPass.val('');
-                createInputTipo.val('');                
-                createInputMail.val('');  
+                createInputTipo.val('');
+                createInputMail.val('');
             }
         });
     });
+    
+    //vista administrador
+    var admin = obtenerValorParametro('ad');
+    var encargado = obtenerValorParametro('en');
+    var estudiante = obtenerValorParametro('es');
+    if (admin) {
+        $.ajax({
+            url: BASE_URI + '/usuarios/' + admin,
+            method: 'GET',
+            contentType: 'application/json',
+            crossDomain: true,
+            success: function (response) {
+                console.log(response);
+                console.log("adkfjñ");
+                console.log(valor);
+                console.log(response.tipo);
+                if (response.id_usuario !== 0 && response.tipo !== 0) {
+                    if (valor==3 && response.tipo==3) {
+                        location.href = "/reservaCl/internas/Administrador.html?ad="+response.id_usuario;
+                    } else {
+                        var tbodyEl = $('.mensaje');
+                        tbodyEl.html('');
+                        tbodyEl.append('\
+                            <h6>USTED NO ES ADMINISTRADOR</h6>\ \
+                        ');
+                    }
+                    if (valor==2 && response.tipo==2) {
+                        location.href = "/reservaCl/internas/AdministrarLab.html?en="+response.id_usuario;
+                    }else {
+                        var tbodyEl = $('.mensaje');
+                        tbodyEl.html('');
+                        tbodyEl.append('\
+                            <h6>USTED NO ES ENCARGADO DE LABORATORIO</h6>\ \
+                        ');
+                    }                    
+                    if (valor==1 && response.tipo==1) {
+                        location.href = "/reservaCl/internas/LoginReservar.html?es="+response.id_usuario;
+                    }
+
+                } else {
+                    var tbodyEl = $('.mensaje');
+                    tbodyEl.html('');
+                    tbodyEl.append('\
+                            <h6>Usuario o contraseña incorrectas</h6>\ \
+                    ');
+
+                }
+            }
+        });
+    }
+    
 });
