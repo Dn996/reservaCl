@@ -58,8 +58,7 @@ $(document).ready(function () {
                         \n\<section class="infoLab1"> ' + '\
                         \n\<h2> ' + laboratorio.nombre + '</h2>' + '\
                         \n\<h5> ' + laboratorio.nombre_usuario + '</h5>' +
-                        '\n\<h5> ' + laboratorio.email + '</h5>' +
-                        '\n\<input id="id_lab" value=' + laboratorio.id_laboratorio + ' style="visibility:hidden"></input> <br>' +
+                        '\n\<h5> ' + laboratorio.email + '</h5>' +                        
                         '\n\<a href="lab1.html?lab=' + laboratorio.id_laboratorio + '" class="btn btn-primary btn-md fa fa-eye" id="labo"type="submit"></a> ' +
                         '\n\ </section>\
                         ' + '</div>\
@@ -70,8 +69,7 @@ $(document).ready(function () {
     //vista laboratorios 
     
     var valor = obtenerValorParametro('lab');
-    if (valor) {
-        //alert(valor);
+    if (valor) {        
         console.log(valor);
         $.ajax({
             url: BASE_URI + '/laboratorios/' + valor,
@@ -132,6 +130,42 @@ $(document).ready(function () {
                     ');
 
                 }
+            }
+        });
+    });
+    
+      $('#registro_Est').on('submit', function (event) {
+        event.preventDefault();
+
+        var createInputCedula = $('#cedulaE');
+        var createInputName = $('#names');
+        var createInputUser = $('#user');
+        var createInputPass = $('#password');
+        var createInputTipo = $('#tipo');
+        var createInputMail = $('#mail');
+        $.ajax({
+            url: BASE_URI + '/usuarios',
+            method: 'POST',
+            contentType: 'application/json',            
+            data: JSON.stringify({cedula: createInputCedula.val(),
+                nombres: createInputName.val(), usuario: createInputUser.val(),
+                contrasenia: createInputPass.val(), tipo: createInputTipo.val(),
+                mail: createInputMail.val()}),
+            success: function (response) {
+                var tbodyEl = $('.mensajeEst');
+                    tbodyEl.html('');
+                    tbodyEl.append('\
+                            <label>Datos guardados correctamente</label>\ \
+                    ');
+                console.log(createInputTipo.val())
+                console.log(createInputMail.val())
+                console.log(response);
+                createInputCedula.val('');
+                createInputName.val('');
+                createInputUser.val('');
+                createInputPass.val('');
+                createInputTipo.val('');                
+                createInputMail.val('');  
             }
         });
     });
