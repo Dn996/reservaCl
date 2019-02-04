@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Laboratorio de .......</title>
+    <title>LRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <script src="main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
 <body>
 
@@ -20,13 +21,13 @@
                         <img src="img/logo.png" alt="">
                     </div>
                 </div>
-                <div class="col-md-9" id="title">
-                    <h2>Laboratorio de Resistencia de Materiales</h2> 
+                <div class="col-md-9 lab_select" id="title">
+                   <!-- <h2 class="lab_select"></h2> -->
                 </div> 
             </header>
         </div>
         <div class="row">
-            <div class="col-md-9 menuGeneral">
+            <div class="col-md-10 menuGeneral">
                     <nav class="top_menu" id="menu">
                         <ul>
                             <li><a href="#">Quienes somos</a></li>
@@ -34,19 +35,14 @@
                         </ul>
                     </nav>     
             </div>
-            <div class="col-md-3 manage">
-                <a href="internas/LoginReservar.html" class="btn btn-primary btn-md fa fa-calendar" type="submit"> Reservar</a>
-                <a href="internas/LoginEncargado.html" class="btn btn-primary btn-md fa fa-home" type="submit"> AdministrarLab</a>  
+            <div class="col-md-2 cuadroForm">
+                <a href="###" class="btn btn-primary btn-md fa fa-sign" type="submit" id="boton">Inicio</a>  
             </div>
         </div>
 
         <div class="row" id="labResis">
             <div class="col-md-6 infLab">
-                <h3>Información</h3>
-                <p>
-                    El laboratorio de Resistencia de Materiales se encuentra en el Departamento de Geología Minas e Ingeniería Civil. El Laboratorio presta servicos académicos, de investigación y externos; está orientado a formar a los estudiantes en la ejecución de pruebas estandarizadas (ASTM, INEN), orientadas a determinar las propiedades físicas y mecánicas de los materiales de construcción.
-                    Actualmente el Laboratorio posee acreditación ISO 9001. 
-                </p>
+                <h3>Información</h3>                
             </div>
             <div class="col-md-6 contLab">
                 <div class="col-md-6 infoL">
@@ -54,60 +50,9 @@
                 </div>
                 <div class="col-md-6 infoR">
                     <h4>Encargado/a</h4>
-                    <section class="infLabResis">
-                        <h5>Responsable del Laboratorio</h5>
-                        <h5>MSc. Berenice Zúñiga Torres</h5>
-                        <h5>bczuniga@utpl.edu.ec</h5>
+                    <section class="infEncLabResis">                        
                     </section>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 ensayos">
-                <button type="button" class="btn btn-info">VER ENSAYOS</button>
-             </div>
-
-            <div class="col-md-12 tablaEnsayos">
-                <table border="1" style=”width: 100%”>
-                    <caption>Tabla de Ensayos</caption>
-                    <colgroup>
-                        <col style="width: 20%"/>
-                        <col style="width: 40%"/>
-                        <col style="width: 40%"/>
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th colspan="3">Concreto</th>
-                        </tr>
-                    </thead>
-                    <thead>
-                        <tr>
-                            <th rowspan="2">ENSAYOS</th>
-                            <th colspan="2">NORMA</th>
-                        </tr>
-                        <tr>
-                            <th>Nacional</th>
-                            <th>Internacional</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Determinación del esfuerzo a la compresión de especimenes cilíndricos de concreto. </th>
-                            <td>INEN 1573</td>
-                            <td>ASTM C39</td>
-                        </tr>
-                        <tr>
-                            <th>Determinación del esfuerzo a la compresión de especimenes cilíndricos de concreto. </th>
-                            <td>INEN 1573</td>
-                            <td>ASTM C39</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3">Pie de tabla.</td>
-                        </tr>
-                    </tfoot>
-                </table>
             </div>
         </div>
     </div>
