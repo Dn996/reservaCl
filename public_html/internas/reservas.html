@@ -1,172 +1,150 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LRM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="../js/jquery.js"></script>
-    <script src="../js/funciones.js"></script>
-    <script src="../js/scripts.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LRM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/funciones.js"></script>
+        <script src="../js/scripts.js"></script>
 
-</head>
-<body>
-    <div class="container " id="cnt_plantilla">
-        <div class="row" id="inicio">
-            <header id="encabezado">
-                <div class="col-md-3">
-                    <div id="logo">
-                        <img src="../img/logo.png" alt="">
+    </head>
+    <body>
+        <div class="container " id="cnt_plantilla">
+            <div class="row" id="inicio">
+                <header id="encabezado">
+                    <div class="col-md-3">
+                        <div id="logo">
+                            <img src="../img/logo.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-9" id="title">
-                    <h2>Reserva de Laboratorio de Resistencia de Materiales</h2> 
-                </div> 
-            </header>
-        </div>
+                    <div class="col-md-9" id="title">
+                        <h2>Reserva de Laboratorio de Resistencia de Materiales</h2> 
+                    </div> 
+                </header>
+            </div>
 
-        <div class="row">
-            <div class="col-md-12 menuGeneral">
-                <nav class="top_menu" id="menu">
-                    <ul>
-                        <li><a href="#">Quienes somos</a></li>
-                        <li><a href="#">Proyectos</a></li>
-                    </ul>
-                </nav>     
-            </div>
-        </div>
-
-        <div class="row ReservasAgendadas">
-            <div class="col-md-12">
-                <h3>Horarios Reservados</h3>
-                <table>
-                        <tr>
-                          <th>Estudiante</th>
-                          <th>Titulación</th>
-                          <th>Fecha</th>
-                          <th>Hora</th>
-                          <th>Tema práctica</th>
-                        </tr>
-                        <tr>
-                          <td>Ye Zhetai</td>
-                          <td>Physicist</td>
-                          <td>Male</td>
-                          <td>12-01-2019</td>
-                          <td>15:00</td>
-                        </tr>
-                        <tr>
-                          <td>Shao Lin</td>
-                          <td>Physicist</td>
-                          <td>Female</td>
-                          <td>12-01-2019</td>
-                          <td>15:00</td>
-                        </tr>
-                        <tr>
-                          <td>Ye Wenjie</td>
-                          <td>Astrophysicist</td>
-                          <td>Female</td>
-                          <td>12-01-2019</td>
-                          <td>15:00</td>
-                        </tr>
-                        <tr>
-                          <td>Ye Wenxue</td>
-                          <td>Student</td>
-                          <td>Female</td>
-                          <td>12-01-2019</td>
-                          <td>15:00</td>
-                        </tr>
-                      </table>
-            </div>
-        </div>
-        
-        <div class="row filita">
-            <div class="col-md-12 SolicitudReserva">
-                <section class="da">
-                    <h3>Solicitud de Reserva</h3>
-                    <form method="post" action="">
-                        <div class="datos">
-                            <label for="">Titulación:</label>
-                            <input class="form-control" id="titulacion" required type="text" name="titulacion" placeholder="Titulación"><br>
-                            <label for="">Periodo Académico:</label>
-                            <input class="form-control" required type="text" id="periodoAc" name="peridodoAc" placeholder="Abril 2019 - Agosto 2019"><br>
-                            <label for="">Nivel Académico:</label>
-                            <input class="form-control" required type="text" id="nivelAc" name="nivelAc" placeholder="Posgrado"><br>
-                            <label for="">Componente:</label>
-                            <input class="form-control" required type="text" id="componente" name="componente" placeholder="Materia" required=""><br>
-                            <label for="">Código de proyecto (ISO 9001):</label>
-                            <input class="form-control" required type="text" id="codigo" name="codigo" placeholder="Código" required=""><br>
-                            <label for="">Tema de práctica:</label>
-                            <input class="form-control" required type="text" id="tema" name="tema" placeholder="Tema"><br>
-                            <label for="">Docente:</label>
-                            <input class="form-control" required type="text" id="docente" name="docente" placeholder="Docente"><br>
-                            <label for="">Estudiante Tesista:</label>
-                            <input class="form-control" required type="text" id="estudiante" name="estudiante" placeholder="Practicante" required=""><br>
-                            <label for="">Ciclo:</label>
-                            <input class="form-control" required type="text" id="ciclo" name="ciclo" placeholder="Ciclo" required=""><br>
-                            <label for="">Paralelo:</label>
-                            <input class="form-control" required type="text" id="paralelo" name="paralelo" placeholder="Paralelo" required=""><br>
-                            <label for="">Fecha de reserva:</label>
-                            <input class="form-control" type="text" id="fecha" name="fecha" placeholder="Fecha de Nacimiento"><br>
-                            <label for="">Hora:</label>
-                            <input class="form-control" type="text" id="hora" name="hora" placeholder="Hora" required=""><br>
-                        </div>
-                        <div class="guardar">
-                            <button type="submit" id="btn_reservar_est" class="form-control btn btn-primary btn-md fa fa-sign" >Guardar Información</button>
-                        </div>
-                    </form>
-                </section>
-            </div>
-        </div>
-    </div>
-</body>
-<footer>
-    <div class="container">
-        <div class="row" id="pie">
-            <div class="col-md-3 pie1">
-                <div>
-                    <img src="../img/logo2.png" alt="">
-                    <h5>Universidad Técnica Particular De Loja</h5>
+            <div class="row">
+                <div class="col-md-12 menuGeneral">
+                    <nav class="top_menu" id="menu">
+                        <ul>
+                            <li><a href="#">Quienes somos</a></li>
+                            <li><a href="#">Proyectos</a></li>
+                        </ul>
+                    </nav>     
                 </div>
             </div>
-            <div class="col-md-6 pie2">
-                <div>
-                    <h4>Contactos</h4>
-                    <div class="col-md-4">
-                        <img src="../img/contacto.png" class="img1">
-                        <div class="social">
-                            <h5>Dayana Chamba</h5>
-                            <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>dchamba@utpl.edu.ec</i></h5>
-                        </div>
-                        
+
+            <div class="row ReservasAgendadas">
+                <div class="col-md-12">
+                    <h3>Horarios Reservados</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Estudiante</th>
+                                <th>Titulación</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Tema práctica</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>                        
+                    </table>
+                </div>
+            </div>
+
+            <div class="row filita">
+                <div class="col-md-12 SolicitudReserva">
+                    <section class="da">
+                        <h3>Solicitud de Reserva</h3>
+                        <form method="post">
+                            <div class="datos">
+                                <label for="">Titulación:</label>
+                                <input class="form-control" id="titulacion" required type="text" name="titulacion" placeholder="Titulación"><br>
+                                <label for="">Periodo Académico:</label>
+                                <input class="form-control" required type="text" id="periodoAc" name="peridodoAc" placeholder="Abril 2019 - Agosto 2019"><br>
+                                <label for="">Nivel Académico:</label>
+                                <input class="form-control" required type="text" id="nivelAc" name="nivelAc" placeholder="Posgrado"><br>
+                                <label for="">Componente:</label>
+                                <input class="form-control" required type="text" id="componente" name="componente" placeholder="Materia" required=""><br>
+                                <label for="">Código de proyecto (ISO 9001):</label>
+                                <input class="form-control" required type="text" id="codigo" name="codigo" placeholder="Código" required=""><br>
+                                <label for="">Tema de práctica:</label>
+                                <input class="form-control" required type="text" id="tema" name="tema" placeholder="Tema"><br>
+                                <label for="">Docente:</label>
+                                <input class="form-control" required type="text" id="docente" name="docente" placeholder="Docente"><br>
+                                <label for="">Estudiante Tesista:</label>
+                                <input class="form-control" required type="text" id="estudiante" name="estudiante" placeholder="Practicante" required=""><br>
+                                <label for="">Ciclo:</label>
+                                <input class="form-control" required type="text" id="ciclo" name="ciclo" placeholder="Ciclo" required=""><br>
+                                <label for="">Paralelo:</label>
+                                <input class="form-control" required type="text" id="paralelo" name="paralelo" placeholder="Paralelo" required=""><br>
+                                <label for="">Fecha de reserva:</label>
+                                <input class="form-control" type="text" id="fecha" name="fecha" placeholder="DD-MM-AA"><br>
+                                <label for="">Hora:</label>
+                                <input class="form-control" type="text" id="hora" name="hora" placeholder="00:00" required=""><br>
+                            </div>
+                            <div class="guardar">
+                                <button type="submit" id="btn_reservar_est" class="form-control btn btn-primary btn-md fa fa-sign" >Guardar Información</button>
+                            </div>
+                            <div class="mensajeRes">
+
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="container">
+            <div class="row" id="pie">
+                <div class="col-md-3 pie1">
+                    <div>
+                        <img src="../img/logo2.png" alt="">
+                        <h5>Universidad Técnica Particular De Loja</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 pie2">
+                    <div>
+                        <h4>Contactos</h4>
+                        <div class="col-md-4">
+                            <img src="../img/contacto.png" class="img1">
+                            <div class="social">
+                                <h5>Dayana Chamba</h5>
+                                <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>dchamba@utpl.edu.ec</i></h5>
+                            </div>
 
 
-                    </div>
-                    <div class="col-md-4">
-                        <img src="../img/contacto.png" class="img2">
-                        <div class="social">
-                            <h5>Dayana Chamba</h5>
-                            <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>dchamba@utpl.edu.ec</i></h5>
+
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="../img/contacto.png" class="img3">
-                        <div class="social">
-                            <h5>Dayana Chamba</h5>
-                            <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>dchamba@utpl.edu.ec</i></h5>
+                        <div class="col-md-4">
+                            <img src="../img/contacto.png" class="img2">
+                            <div class="social">
+                                <h5>Dayana Chamba</h5>
+                                <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>dchamba@utpl.edu.ec</i></h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../img/contacto.png" class="img3">
+                            <div class="social">
+                                <h5>Dayana Chamba</h5>
+                                <h5><i class="far fa-envelope"> <a href=""><i class="fab fa-facebook-square"></i></a>dchamba@utpl.edu.ec</i></h5>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-3 pie3">
+                    <h5>San Cayetano Alto - Loja</h5>
+                </div>                                                                                                                                                                                                    
             </div>
-            <div class="col-md-3 pie3">
-                <h5>San Cayetano Alto - Loja</h5>
-            </div>                                                                                                                                                                                                    
         </div>
-    </div>
-</footer>
+    </footer>
 </html>

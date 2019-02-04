@@ -1,4 +1,4 @@
-var BASE_URI = "http://localhost:8080/reservaLab/api";
+var BASE_URI = "http://localhost:10297/reservaLab/api";
 
 
 function obtenerValorParametro(sParametroNombre) {
@@ -39,7 +39,69 @@ function datoBusqueda(dato) {
     });
     return datos;
 }
+//VALIDAR RESERVAS
+$(document).ready(function () {    
+    // GET/READ
+   
+        $.ajax({
+            url: BASE_URI + '/reserva',
+            contentType: 'application/json',
+            crossDomain: true,
+            success: function (response) {
+                console.log(response);
 
+                var tbodyEl = $('#BodyReE');
+
+                tbodyEl.html('');
+
+                response.forEach(function (reserva) {
+                    tbodyEl.append('\
+                        <tr>\
+                            <td class="estudiante">' + reserva.estudiante + '</td>\
+                            <td class="titulacion">'+ reserva.titulacion + '</td>\\n\
+                            <td class="titulacion">'+ reserva.fecha + '</td>\\n\
+                            <td class="titulacion">'+ reserva.hora + '</td>\\n\
+                            <td class="titulacion">'+ reserva.tema_practica + '</td>\\n\\ \
+                            <td class="boton fa fa-check">\n\
+                            <td class="rechazar fa fa-times">\n\ \
+                        </tr>\
+                    ');
+                });
+            }
+        });
+    });
+
+
+//consulta reservas
+$(document).ready(function () {    
+    // GET/READ
+   
+        $.ajax({
+            url: BASE_URI + '/reserva',
+            contentType: 'application/json',
+            crossDomain: true,
+            success: function (response) {
+                console.log(response);
+
+                var tbodyEl = $('tbody');
+
+                tbodyEl.html('');
+
+                response.forEach(function (reserva) {
+                    tbodyEl.append('\
+                        <tr>\
+                            <td class="estudiante">' + reserva.estudiante + '</td>\
+                            <td><input type="text" class="titulacion" value="' + reserva.titulacion + '"></td>\\n\
+                            <td><input type="text" class="fecha" value="' + reserva.fecha + '"></td>\\n\
+                            <td><input type="text" class="hora" value="' + reserva.hora + '"></td>\
+                            <td><input type="text" class="tema" value="' + reserva.tema_practica + '"></td>\ \
+                            </td>\
+                        </tr>\
+                    ');
+                });
+            }
+        });
+    });
 $(document).ready(function () {
     // GET/READ       
     $.ajax({
@@ -160,7 +222,7 @@ $(document).ready(function () {
         });
     });
 
-    $('#registro_Est').on('submit', function (event) {
+    $('#registro_Est').click('submit', function (event) {
         event.preventDefault();
 
         var createInputCedula = $('#cedulaE');
@@ -199,9 +261,8 @@ $(document).ready(function () {
     //vista administrador
 
     //Reservas
-    $('#btn_reservar_est').on('submit', function (event) {
+    $('#btn_reservar_est').click('submit', function (event) {
         event.preventDefault();
-
         var createInputTitulacion = $('#titulacion');
         var createInputPeriodoAc = $('#periodoAc');
         var createInputNivelAc = $('#nivelAc');
@@ -214,19 +275,20 @@ $(document).ready(function () {
         var createInputParalelo = $('#paralelo');
         var createInputFecha = $('#fecha');
         var createInputHora = $('#hora');
+        
         $.ajax({
             url: BASE_URI + '/reserva',
             method: 'POST',
             contentType: 'application/json',
-            data: JSON.stringify({titulacion: createInputTitulacion.val(),
-                periodo_academico: createInputPeriodoAc.val(), nivel_academico: createInputNivelAc.val(),
-                componente: createInputComponente.val(), codigo_proyecto: createInputCodigo.val(),
-                tema_practica: createInputTema.val(), docente: createInputDocente.val(),
-                estudiante: createInputEstudiante.val(), ciclo: createInputCiclo.val(),
-                fecha: createInputFecha.val(), hora: createInputHora.val(),
-                laboratorio_id_laboratorio: 1, usuario_id_usuario: 3}),
+            data: JSON.stringify({ciclo: createInputCiclo.val(), codigo_proyecto: createInputCodigo.val(),
+                componente: createInputComponente.val(), docente: createInputDocente.val(),
+                estudiante: createInputEstudiante.val(), fecha: createInputFecha.val(),
+                hora: createInputHora.val(), laboratorio_id_laboratorio: 1, nivel_academico: createInputNivelAc.val(),
+                periodo_academico: createInputPeriodoAc.val(), tema_practica: createInputTema.val(), 
+                titulacion: createInputTitulacion.val(), usuario_id_usuario: 3}),            
             success: function (response) {
-                var tbodyEl = $('.mensajeEst');
+                
+                var tbodyEl = $('.mensajeRes');
                 tbodyEl.html('');
                 tbodyEl.append('\
                             <label>Datos guardados correctamente</label>\ \
